@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import * as Input from '@/assets/js/Input'
+// import * as Input from '@/assets/js/Input'
 import graphicsCommon from '@/assets/js/GraphicsCommon'
 
 export default {
@@ -21,20 +21,13 @@ export default {
   mounted () {
     this.canvasContext = this.$refs.gameCanvas.getContext('2d');
 
-    document.addEventListener('keyup',this.keyReleased);
-
-
     let framesPerSecond = 30;
     setInterval(this.draw, 1000/framesPerSecond)
 
-    Input.setupInput();
+    // Input.setupInput();
 
   },
   methods: {
-    keyReleased(evt) {
-      console.log("YAY");
-      console.log(evt);
-    },
     draw() {
       let obj = new graphicsCommon(this.canvasContext);
 

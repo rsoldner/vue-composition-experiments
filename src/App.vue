@@ -54,5 +54,8 @@ div nav li div {
   padding: 8px;
   background-color: #dddddd;
 }
+body {
+  background-color: cadetblue;
+}
 </style>
 
